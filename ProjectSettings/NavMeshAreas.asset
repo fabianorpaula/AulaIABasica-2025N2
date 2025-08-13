@@ -11,9 +11,9 @@ NavMeshProjectSettings:
     cost: 1
   - name: Jump
     cost: 2
-  - name: 
-    cost: 1
-  - name: 
+  - name: Fogo
+    cost: 1000
+  - name: Gelo
     cost: 1
   - name: 
     cost: 1
@@ -74,11 +74,11 @@ NavMeshProjectSettings:
   - serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
-    agentHeight: 2
+    agentHeight: 1
     agentSlope: 45
-    agentClimb: 2
-    ledgeDropHeight: 10
-    maxJumpAcrossDistance: 10
+    agentClimb: 1
+    ledgeDropHeight: 500
+    maxJumpAcrossDistance: 1000
     minRegionArea: 2
     manualCellSize: 0
     cellSize: 0.16666667
