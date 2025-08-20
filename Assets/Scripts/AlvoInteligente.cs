@@ -5,7 +5,7 @@ using UnityEngine.AI;
 public class AlvoInteligente : MonoBehaviour
 {
 
-    public NavMeshAgent agente;
+    public NavMeshAgent MeuAlvo;
 
     //MeusCaminhos
     public List<GameObject> Destinos;
@@ -14,18 +14,19 @@ public class AlvoInteligente : MonoBehaviour
 
     public void Start()
     {
-        agente = GetComponent<NavMeshAgent>();
+        MeuAlvo = GetComponent<NavMeshAgent>();
+        MeuAlvo.speed = 40;
         DestinoReal = Destinos[0];
     }
 
     void Update()
     {
-        agente.SetDestination(DestinoReal.transform.position);
-
+        MeuAlvo.SetDestination(DestinoReal.transform.position);
+        
         float DistanciaFinal = Vector3.Distance(
             transform.position, DestinoReal.transform.position);
 
-        if (DistanciaFinal < 3)
+        if (DistanciaFinal < 7)
         {
             int novocaminho = Random.Range(0, 10);
             DestinoReal = Destinos[novocaminho];
